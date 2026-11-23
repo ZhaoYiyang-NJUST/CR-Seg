@@ -51,6 +51,9 @@ Suggested placement:
   <img src="CONFIRMED_RELATIVE_PATH" width="100%" alt="Overview of CR-Seg">
 </p>
 -->
+<p align="center">
+  <img src="figs/method.pdf" width="100%" alt="Overview of CR-Seg">
+</p>
 
 ### 2.2. Counterfactual Training
 
