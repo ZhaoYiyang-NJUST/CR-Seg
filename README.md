@@ -24,9 +24,6 @@ A high-quality mask alone does not establish whether the reasoning text improves
 - [3. Dataset](#3-dataset)
 - [4. Experimental Results](#4-experimental-results)
 - [5. Training and Evaluation](#5-training-and-evaluation)
-- [6. Citation](#6-citation)
-- [7. FAQ](#7-faq)
-- [8. Acknowledgments and License](#8-acknowledgments-and-license)
 
 ## 2. Method Overview
 
@@ -66,12 +63,12 @@ Both conditions retain structural tags, spatial tokens, and the bounding-box ans
 
 The signed difference is:
 
-$$
+```math
 \Delta_{\mathrm{CF}} =
 \mathrm{Dice}(M^{\mathrm{full}}, G)
 -
 \mathrm{Dice}(M^{\mathrm{stripped}}, G).
-$$
+```
 
 The positive part of this difference supplies the counterfactual reward, with a difficulty-dependent curriculum weight.
 
@@ -91,6 +88,9 @@ Insert the qualitative comparison figure here after confirming its path.
 Use CR-Seg consistently in the image labels and identify adapted
 box-to-mask baselines in the caption.
 -->
+<p align="center">
+  <img src="figs/Qualitative.png" width="100%" alt="Overview of CR-Seg">
+</p>
 
 ## 3. Dataset
 
@@ -223,39 +223,5 @@ Commands must match the released code and checkpoints.
 Do not substitute generic train.py/test.py commands.
 -->
 
-## 6. Citation
-
-**Paper title:** Counterfactual Reward Learning for Reasoning-Driven Polyp Segmentation
-
-<!-- Add the verified paper link and BibTeX after bibliographic details are confirmed. -->
-
-## 7. FAQ
-
-**Does CR-Seg require location descriptions or ground-truth boxes at inference?**
-
-No. The query specifies the task without describing the target's location or appearance. The model's generated box is not used to prompt its mask decoder.
-
-**Is counterfactual evaluation required for every inference image?**
-
-No. Ground-truth-based counterfactual reward evaluation is used during training and diagnostic experiments, not ordinary inference.
-
-**Are the difficulty labels clinical categories?**
-
-No. They are defined by the OOF Dice of an auxiliary segmentation model.
-
-**Does this benchmark use the original source-dataset split sizes?**
-
-The counts above describe the constructed benchmark after deduplication, difficulty filtering, and annotation screening. They are not the original dataset sizes.
-
-## 8. Acknowledgments and License
-
-We acknowledge the developers of Qwen2.5-VL, MedSAM2, and the source datasets used in this study.
-
-Source datasets and pretrained models remain subject to their respective licenses and terms of use.
-
-<!--
-Add the repository's actual code license and a link to LICENSE.
-Do not infer the code license from the licenses of dependencies or datasets.
--->
 
 [Back to top](#cr-seg-counterfactual-reward-learning-for-reasoning-driven-polyp-segmentation)
