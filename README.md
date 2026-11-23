@@ -67,8 +67,7 @@ Both conditions retain structural tags, spatial tokens, and the bounding-box ans
 The signed difference is:
 
 $$
-\Delta_{\mathrm{CF}}
-=
+\Delta_{\mathrm{CF}} =
 \mathrm{Dice}(M^{\mathrm{full}}, G)
 -
 \mathrm{Dice}(M^{\mathrm{stripped}}, G).
