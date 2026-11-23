@@ -52,7 +52,7 @@ Suggested placement:
 </p>
 -->
 <p align="center">
-  <img src="figs/method.pdf" width="100%" alt="Overview of CR-Seg">
+  <img src="figs/framework.png" width="100%" alt="Overview of CR-Seg">
 </p>
 
 ### 2.2. Counterfactual Training
